@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="databaseService"
+		transaction-type="RESOURCE_LOCAL">
+		<class>com.mitchell.examples.claim.LossInfoType</class>
+		<class>com.mitchell.examples.claim.MitchellClaimType</class>
+		<class>com.mitchell.examples.claim.VehicleInfoType</class>
+		<class>com.mitchell.examples.claim.VehicleListType</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+			<property name="javax.persistence.jdbc.user" value="mitchell_db" />
+			<property name="javax.persistence.jdbc.password" value="mitchell" />
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/> -->
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.default_schema" value="MITCHELL_DB" /> -->
+		</properties>
+
+	</persistence-unit>
+</persistence>
